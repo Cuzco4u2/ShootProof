@@ -1,5 +1,5 @@
 # The Robot Framework automation toolis pyhton-based, extensible keyword-driven automation for acceptance tesitng
-# This ia change on the comment
+# This ia change on the comment new
 *** Settings ***
 Library  SeleniumLibrary
 
@@ -22,7 +22,7 @@ ${GetStartedBottomButton}  xpath=//div[@id='try-free']//*[name()='a' and @class=
 #Test Case 1: Click on the topmost 'Get Started' button
 
 Click_Top_Button_Get_Started
-    [Tags]    Smoke  GetStarted
+    [Tags]    Smoke  GetStarted  New
     Open Browser  ${url}    ${browser}
     maximize browser window
     Wait Until Element Is Visible   ${getstartedtopbutton}
