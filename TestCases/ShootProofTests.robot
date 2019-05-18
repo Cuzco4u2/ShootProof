@@ -1,5 +1,6 @@
 # The Robot Framework automation toolis pyhton-based, extensible keyword-driven automation for acceptance tesitng
 # This ia change on the comment new - commit on 5/15
+# This is a new review using upscale
 *** Settings ***
 Library  SeleniumLibrary
 
@@ -10,7 +11,7 @@ Resource  ../Resources/Resource.robot
 
 *** Variables ***
 ${url}  https://www.shootproof.com
-${browser}  chrome
+${browser}  ie
 #XPATH locator for the topmost "Get Started" on the page
 ${GetStartedTopButton}  xpath=//a[@class='btn btn-shootproof google-ads-signup-tracking']
 #XPATH locator for the bottonmost "Get Started" on the page
