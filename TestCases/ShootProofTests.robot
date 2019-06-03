@@ -66,7 +66,7 @@ Valid_BottomMost_Get_Started
     Then the Sign-Up page should open
     And the browser should close
 
-#APIUM
+#APIUM TESTS
 Open_Dialer
   setup and open dialer
 
