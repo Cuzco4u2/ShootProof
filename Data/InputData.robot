@@ -1,7 +1,5 @@
 *** Variables ***
-# Configuration
-${BROWSER} =  ie
 
 # Configuration
-${BROWSERS} =  ie
+${BROWSERS} =  Chrome
 ${LOGIN_URL} =  https://www.shootproof.com

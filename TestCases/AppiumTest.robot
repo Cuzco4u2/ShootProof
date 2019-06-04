@@ -3,58 +3,26 @@
 # This is a new review using upscale on 5/18 @ 5:30pm
 #Woeking on the new branch Shoot1
 *** Settings ***
-Library  Selenium2Library
+#Library  Selenium2Library
 #Documentation  This script opens dialer on phone
-#Library  AppiumLibrary
+Library  AppiumLibrary
 Library  Collections
 Resource  ../Resources/Common.robot
 Resource  ../Data/InputData.robot
 Resource  ../Resources/Resource.robot
 
-
 *** Variables ***
-${url}  https://www.shootproof.com
-${browser}  Chrome
-#XPATH locator for the topmost "Get Started" on the page
-${GetStartedTopButton}  xpath=//a[@class='btn btn-shootproof google-ads-signup-tracking']
-#XPATH locator for the bottonmost "Get Started" on the page
-${GetStartedBottomButton}  xpath=//div[@id='try-free']//*[name()='a' and @class='btn btn-shootproof btn-shootproof-white google-ads-signup-tracking']
+${Device_name}  fd1bcffd
+${Appium_server}  http://localhost:4723/wd/hub
+${appPackage}  com.samsung.android.contacts
+${appActivity}  com.android.dialer.DialtactsActivity
+${platfrom}  7.0
+${automationName}  uiautomator2
+${androidbrowserpackage}  com.android.chrome
+${appbrowserActivity}  com.google.android.apps.chrome.Main
+${automationNameChrome}  Appium
 
 *** Test Cases ***
-#Test Case 1: Click on the topmost 'Get Started' button
-
-Click_Top_Button_Get_Started
-    [Tags]    Smoke  GetStarted  New
-    Open Browser  ${url}    ${browser}
-    maximize browser window
-    Wait Until Element Is Visible   ${getstartedtopbutton}
-    click Element   ${getstartedtopbutton}
-    wait until page contains  Let’s get started
-    close Browser
-
-#Test Case 2: Click on the bottonmost 'Get Started' button
-Click_Bottom_Button_Get_Started
-    [Tags]    Smoke  GetStarted
-    Open Browser  ${url}    ${browser}
-    maximize browser window
-    Wait until page contains  Professional sales tools and stunning client
-    Title Should Be  Online Proofing Galleries for Photographers
-    Wait Until Element Is Visible   ${getstartedbottombutton}
-    click Element   ${getstartedbottombutton}
-    wait until page contains  Let’s get started
-    close Browser
-
-#Test Case 3: click on the Bottommost 'Get Started' button using gherkin style
-#using the common.robot, resource.robot and InputData.robot files to drive the automation
-#This test case is executed using the keywords below
-
-Valid_BottomMost_Get_Started
-    Given browser is opened in homepage
-    And I assert that a Get Started button exist at the button of the page
-    When I click on the Bottommost button on the page
-    Then the Sign-Up page should open
-    And the browser should close
-
 #APIUM TESTS
 Open_Dialer
   setup and open dialer
