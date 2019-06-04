@@ -3,7 +3,7 @@
 # This is a new review using upscale on 5/18 @ 5:30pm
 #Woeking on the new branch Shoot1
 *** Settings ***
-#Library  SeleniumLibrary
+Library  Selenium2Library
 #Documentation  This script opens dialer on phone
 Library  AppiumLibrary
 Library  Collections

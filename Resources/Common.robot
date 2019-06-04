@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    Suite description
-Library  SeleniumLibrary
+Library  Selenium2Library
 
 
 
