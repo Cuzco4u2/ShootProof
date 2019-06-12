@@ -24,7 +24,7 @@ ${GetStartedBottomButton}  xpath=//div[@id='try-free']//*[name()='a' and @class=
 #Test Case 1: Click on the topmost 'Get Started' button
 
 Click_Top_Button_Get_Started
-    [Tags]    Smoke  GetStarted  New
+    [Tags]    Smoke  GetStarted  new
     Open Browser  ${url}    ${browser}
     maximize browser window
     Wait Until Element Is Visible   ${getstartedtopbutton}
